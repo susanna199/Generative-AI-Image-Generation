@@ -6,9 +6,10 @@ The final model is capable of generating professional-grade food photography fro
 
 ## The Challenge
 
-The standard **Food-101 dataset** is designed for classification tasks, providing only simple class labels (e.g., `"sushi"`). For a generative model to learn the nuances of style, texture, and composition, it requires rich, descriptive captions. Manually creating these captions for the 75,000+ images in the training set is infeasible.
+The standard **Food-101 dataset** is designed for classification tasks, providing only simple class labels (e.g., `"sushi"`). The project addresses the challenge of adapting a general-purpose model for a specialized domain by leveraging an automated data preparation workflow and the efficient LoRA (Low-Rank Adaptation) fine-tuning technique.
 
-This project solves that problem by creating an automated data curation pipeline.
+Rather than training on all 101 categories from the Food-101 dataset, this project focuses on fine-tuning a specialized model on a curated subset of **five distinct classes** (sushi, pizza, waffles, donuts, and ramen) to achieve higher fidelity and stylistic consistency.
+
 
 ## The Pipeline
 
