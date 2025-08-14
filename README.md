@@ -29,3 +29,57 @@ This project is a deep learning pipeline that fine-tunes a pre-trained Stable Di
 ---
 
 ## Project Structure
+
+├── data/
+│   ├── raw/
+│   │   └── food-101/
+│   └── processed/
+│       └── food_for_lora/
+├── outputs/
+│   ├── models/
+│   └── generated_images/
+├── scripts/
+│   ├── prepare_dataset.py
+│   ├── train.py
+│   └── inference.py
+└── src/
+└── config.py
+
+---
+
+## Setup and Installation
+
+1.  **Clone the repository (if applicable)**
+    ```bash
+    git clone <your-repo-url>
+    cd your_project_name
+    ```
+
+2.  **Create a Python Environment**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On macOS/Linux
+    # venv\Scripts\activate  # On Windows
+    ```
+
+3.  **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Place the Dataset**
+    Download and unzip the Food-101 dataset. Place the entire `food-101` folder inside the `data/raw/` directory.
+
+5.  **Configure Paths**
+    Open `src/config.py` and ensure the `RAW_FOOD101_ROOT` variable points to the correct path of your dataset if it's not in the default location.
+
+---
+
+## Usage Workflow
+
+The project is run in three main stages:
+
+**1. Data Preparation**
+This script reads the raw images, generates captions using BLIP, and saves the processed data.
+```bash
+python scripts/prepare_dataset.py
