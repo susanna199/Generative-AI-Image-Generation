@@ -83,3 +83,8 @@ The project is run in three main stages:
 This script reads the raw images, generates captions using BLIP, and saves the processed data.
 ```bash
 python scripts/prepare_dataset.py
+
+**2. Model Training**
+This script launches the fine-tuning process using the prepared data.
+```bash
+python scripts/prepare_dataset.py
