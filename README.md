@@ -75,3 +75,16 @@ Execute the scripts from the project's root directory.
 This script will process the raw images and generate captions. For a quick test, set the `LIMIT` in `config.py` to a small number (e.g., 100). For the full run, set `LIMIT = None`.
 ```bash
 python scripts/prepare_dataset.py
+```
+
+**Step 2: Train the Model**
+This script will launch the fine-tuning process using the data you just prepared. This is a time-consuming step.
+```bash
+python scripts/train.py
+```
+
+**Step 3:Generate a Test Image**
+After training is complete, a pytorch_lora_weights.safetensors file will be saved in outputs/models/. You can use the inference script to test it. Edit the test_prompt inside the script to create new images.
+```bash
+python scripts/inference.py
+```
